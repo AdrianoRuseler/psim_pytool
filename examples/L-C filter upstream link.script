@@ -1,0 +1,16 @@
+
+FileIn = GetLocal("PARAMPATH") + "L-C filter upstream link.psimsch";
+
+// Array(size)
+values = Array(20, 60, 10);
+i = 0;
+len1 = sizeof(values); 
+while(i < len1)
+{
+    FileOut = GetLocal("PARAMPATH") + "scriptout" + string(values[i]) + ".txt";
+	// Simulate("FileIn.psimsch", "FileOut.txt", TotalTime=100m, TimeStep=10u, PrintTime=10m, PrintStep=2, SaveFlag=1, LoadFlag=0; Ro=20, graph1);
+	Simulate (FileIn, FileOut,Ro=values[i]);   
+	Simview(FileOut);
+	i++;
+} 
+
