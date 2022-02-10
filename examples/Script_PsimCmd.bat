@@ -56,7 +56,7 @@ REM ///////////////////////////////////////////////
 @Pause
 
 @Echo ON
-PsimCmd.exe -i "L-C filter upstream link.script" -g
+PsimCmd.exe -i "L-C filter upstream link.script"
 
 @Pause
 
